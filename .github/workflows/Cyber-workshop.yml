@@ -1,4 +1,4 @@
-name: Cyber-workshop
+name: CI
 
 on:
   push:
