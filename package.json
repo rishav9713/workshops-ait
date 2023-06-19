@@ -1,6 +1,7 @@
 {
   "name": "cyber",
   "version": "1.0.0",
+  "homepage": "https://workshops.anshinfotech.org",
   "description": "",
   "main": "index.js",
   "scripts": {
