@@ -2,8 +2,7 @@ name: Cyber-workshop
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -26,4 +25,4 @@ jobs:
         run: npm run build --if-present
 
       - name: Run Environment 
-        run: npm run dev
+        run: npm test
