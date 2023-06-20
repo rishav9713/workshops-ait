@@ -13,8 +13,16 @@ app.use(express.urlencoded({ extended: true }));
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect(process.env.URL);
-  console.log("Database Connected!");
+  try {
+    await mongoose.connect(process.env.URl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("Connected to MongoDB");
+  } catch (err) {
+    console.error("Error connecting to MongoDB:", err);
+    // Handle the error appropriately (e.g., retry, show a message, exit the application)
+  }
 }
 // Serve static files
 app.use(express.static("public"));
